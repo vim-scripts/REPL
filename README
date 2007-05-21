@@ -1,0 +1,32 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1903
+
+" This script defines command REPL which is prompt-driven. REPL 
+" command does not take arguments. It prompts for:
+" 1) string to replace. You can use * here for current word under cursor,
+"    / for current search pattern. Simply Enter means current search pattern, too.
+" 2) string to repalce to. Empty string means empty string here.
+" 3) Substitution flags:
+"     (i) ignorecase (m) matchCase
+"     (w) as word    (c) confirm    (f) in files
+"    Default flags are 'mw' - match-case and whole-word substitution.
+"
+" If you include f in flags, you are additionally prompted for
+" file patterns (space-separated). Examples: (1) *.c *.h (2)  **.[ch]
+" '**' in file patterns means recursive file matching.
+"
+" Press Ctrl-C at any prompt to abort the script.
+"
+" That's all.
+" Send bugs and wishes to: iler.ml@gmail.com
+"
+" Todo & wishes:
+" - print "No substitutions" when there were no substitutions. Currently,
+"   nothing is printed where nothing was substituted.
+"
+" Example dialog:
+"  :REPL
+"  Replace what > foo
+"  Replace to   > bar
+"   (i) ignorecase (m) matchCase
+"   (w) as word    (c) confirm    (f) in files [mw]
+
